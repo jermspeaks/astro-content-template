@@ -20,16 +20,24 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
+│   ├── components/
+│   ├── content/
+│   ├── images/
+│   ├── layouts/
+│   ├── lib/
+│   │   └── utils.ts
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name. Astro also collects content from `src/content` directory, configured by `config.ts`. To add a new content collection, go inside of there.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components. This is currently backed by `shadcn-ui`, which is React-based, but can easily be swapped out by `shadcn-vue`, `shadcn-svelte`, or any other shadcn variant for other frameworks. Please change `components.json` accordingly if you are switching. Also, `src/lib/utils.ts` is for merging tailwind classes, if necessary (which in these projects won't matter).
 
-Any static assets, like images, can be placed in the `public/` directory.
+We have `src/layouts` which covers the BaseHead and any page layouts.
+
+Any static assets, other than images, can be placed in the `public/` directory. Images use `astro:assets` which automatically encodes images to web compliant formats, like `.webp`.
 
 ## 🧞 Commands
 
@@ -44,10 +52,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
 ## Todo
 
+- [x] Add `shadcn/ui` components
 - [ ] Add the `devcontainer.json` config for GitHub Codespaces
+- [ ] Get content collections started using markdown notes
