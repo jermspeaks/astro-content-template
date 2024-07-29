@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: 'media',
+const config = {
+  darkMode: "media",
   safelist: ["dark"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -76,3 +76,5 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 };
+
+export default config;
