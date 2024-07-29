@@ -55,5 +55,6 @@ All commands are run from the root of the project, from a terminal:
 ## Todo
 
 - [x] Add `shadcn/ui` components
+- [ ] Update Github configuration for no `main` branch pushes
 - [ ] Add the `devcontainer.json` config for GitHub Codespaces
 - [ ] Get content collections started using markdown notes
