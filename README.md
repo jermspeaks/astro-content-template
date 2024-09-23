@@ -3,7 +3,7 @@
 To get quickly started, use this command:
 
 ```sh
-npm create astro@latest -- --template @jermspeaks/astro-content-template
+npm create astro@latest -- --template jermspeaks/astro-content-template
 ```
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/jermspeaks/astro-content-template/tree/main)
